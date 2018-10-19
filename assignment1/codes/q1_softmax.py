@@ -1,4 +1,5 @@
 import numpy as np
+import math
 
 
 def softmax(x):
@@ -36,8 +37,12 @@ def softmax(x):
     else:
         # Vector
         ### YOUR CODE HERE
-        raise NotImplementedError
-        ### END YOUR CODE
+        s = 0
+        for num in x:
+            s += math.exp(num)
+        for num in x:
+            num = math.exp(num) / 
+        ### END YOUR CODE   
 
     assert x.shape == orig_shape
     return x
